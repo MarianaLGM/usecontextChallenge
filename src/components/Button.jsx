@@ -5,17 +5,11 @@ import { useColour } from "../themes/ThemeContext";
 
 const ColourButton = ()=>{
     const {changeColour}= useColour();
-
-const handleChangeColour = (e) =>{
-    changeColour(e.target.value);
-}
-
+    
     return (
         <>
         <div>
-            <h2>Selecciona el color:</h2>
-            <button value="dark" onClick={handleChangeColour}>Cambiar a Dark</button>
-            <button value="light" onClick={handleChangeColour}>Cambiar a Light</button>
+            <button value="dark" onClick={changeColour}>Cambiar color</button>
         </div>
         </>
     )

@@ -6,18 +6,11 @@ import './App.css';
 
 const App = () => { //se envuelve todo en el colourProvider
 
-  const colour = useColour();  // Usamos el color del contexto
-  
-    // Verificamos si el color es 'light' o 'dark' y asignamos la clase que le correspond
-    const appClasses = colour === "light" ? "light" : "dark";  
-
   return (
   
     <ColourProvider >
-      <div className={appClasses}>
         <RoutesApp />
         <ColourButton />
-      </div>
     </ColourProvider>
 
   );
